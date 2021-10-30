@@ -1,0 +1,10 @@
+local banned = {0,0}
+local Players = game:GetService("Players")
+
+    for _, v in pairs(game.Players:GetChildren()) do
+        for i = 1, #banned do
+            if v.UserId == banned[i] then
+                v:Kick("You are blacklisted from this Tribes X! Please contact Syn#9839 or 1NS4D") 
+        end
+    end
+end
