@@ -1,10 +1,46 @@
-local banned = {0,0}
-local Players = game:GetService("Players")
+local PlayerS = game:GetService("Players")
 
-    for _, v in pairs(game.Players:GetChildren()) do
-        for i = 1, #banned do
-            if v.UserId == banned[i] then
-                v:Kick("You are blacklisted from this Tribes X! Please contact Syn#9839 or 1NS4D") 
-        end
-    end
+local GroupS = game:GetService("GroupService")
+local RunS = game:GetService("RunService")
+
+if RunS:IsStudio() then
+	return nil
 end
+
+local Whitelist = {
+	334402511, --lSynister
+	404768190, --lbenevolent
+	3876134555,--banannaeater23
+	481835752, --danceingwithzero
+	291336342, --evileyesxsss
+}
+
+for _,v in ipairs(Whitelist) do
+	Whitelist[v] = true
+end
+
+--
+
+for _,v in ipairs(PlayerS:GetPlayers()) do
+	if (not Whitelist[v.UserId]) then
+		v:Kick("Unauthorized, Please purchase astral to execute this")
+		wait(2)
+		while true do
+			
+		end
+	end	
+end
+
+PlayerS.PlayerAdded:Connect(function(plr)
+	if (not Whitelist[plr.UserId]) then
+		plr:Kick("Unauthorized, Please purchase astral to execute this")
+		wait(2)
+		while true do
+
+		end
+	end
+end)
+
+return nil
+
+
