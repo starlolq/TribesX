@@ -1,7 +1,7 @@
-pcall(function()
-
-local UserIds = {481835752,291336342,8675309}
-if not table.find(UserIds,game.Players.LocalPlayer.UserId) then
-    game.Players.LocalPlayer:Kick('sir you arent whitelisted)
-    end
-end)
+userids = {
+[291336342] = true, -- this is my userid, remove it and add as much as you want in it.
+[1] = true,
+[1] = true
+}
+return userids
+-- These will be our whitelisted users
