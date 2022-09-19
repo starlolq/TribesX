@@ -1,6 +1,6 @@
 pcall(function()
 
-local UserIds = {481835752,291336342,8675309}
+local UserIds = {481835752,1,8675309}
 if not table.find(UserIds,game.Players.LocalPlayer.UserId) then
     game.Players.LocalPlayer:Kick()
     end
