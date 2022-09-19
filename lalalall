@@ -1,50 +1,7 @@
 pcall(function()
 
-local PlayerS = game:GetService("Players")
-
-local GroupS = game:GetService("GroupService")
-local RunS = game:GetService("RunService")
-
-if RunS:IsStudio() then
-    return nil
-end
-
-local Whitelist = {
-    334402511, --lSynister
-    404768190, --lbenevolent
-    3876134555--banannaeater23
-     --evileyesxsss
-
-    
-    
-}
-
-for _,v in ipairs(Whitelist) do
-    Whitelist[v] = true
-end
-
---
-
-for _,v in ipairs(PlayerS:GetPlayers()) do
-    if (not Whitelist[v.UserId]) then
-        v:Kick("Not Whitelisted")
-        wait(0.5)
-        while true do
-            
-        end
-    end    
-end
-
-PlayerS.PlayerAdded:Connect(function(plr)
-    if (not Whitelist[plr.UserId]) then
-        plr:Kick("Not Whitelisted")
-        wait(0.5)
-        while true do
-
-        end
+local UserIds = {481835752,291336342,8675309}
+if not table.find(UserIds,game.Players.LocalPlayer.UserId) then
+    game.Players.LocalPlayer:Kick()
     end
-end)
-
-return nil
-
 end)
