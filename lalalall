@@ -1,3 +1,5 @@
+pcall(function()
+
 local PlayerS = game:GetService("Players")
 
 local GroupS = game:GetService("GroupService")
@@ -11,13 +13,8 @@ local Whitelist = {
     334402511, --lSynister
     404768190, --lbenevolent
     291336342,--evileyesxsss
-    3876134555,--banannaeater23
-    2454994036, --EDUARDOelNOOB7
-    2655971280, --daniel86_864
-    2941969370, --Pajin10xd
-    3860947066, --DzymmJayy
-    2269760080, --OffsetIsCuteAF
-    2992769339 --LilRtGotThis
+    3876134555--banannaeater23
+
     
     
 }
@@ -49,3 +46,5 @@ PlayerS.PlayerAdded:Connect(function(plr)
 end)
 
 return nil
+
+end)
