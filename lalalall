@@ -4,43 +4,48 @@ local GroupS = game:GetService("GroupService")
 local RunS = game:GetService("RunService")
 
 if RunS:IsStudio() then
-	return nil
+    return nil
 end
 
 local Whitelist = {
-	334402511, --lSynister
-	404768190, --lbenevolent
-	3876134555,--banannaeater23
-	481835752, --danceingwithzero
-	291336342, --evileyesxsss
+    334402511, --lSynister
+    404768190, --lbenevolent
+    291336342,--evileyesxsss
+    3876134555,--banannaeater23
+    2454994036, --EDUARDOelNOOB7
+    2655971280, --daniel86_864
+    2941969370, --Pajin10xd
+    3860947066, --DzymmJayy
+    2269760080, --OffsetIsCuteAF
+    2992769339 --LilRtGotThis
+    
+    
 }
 
 for _,v in ipairs(Whitelist) do
-	Whitelist[v] = true
+    Whitelist[v] = true
 end
 
 --
 
 for _,v in ipairs(PlayerS:GetPlayers()) do
-	if (not Whitelist[v.UserId]) then
-		v:Kick("Unauthorized, Please purchase astral to execute this")
-		wait(2)
-		while true do
-			
-		end
-	end	
+    if (not Whitelist[v.UserId]) then
+        v:Kick("Unauthorized, Please purchase astral to execute this")
+        wait(0.5)
+        while true do
+            
+        end
+    end    
 end
 
 PlayerS.PlayerAdded:Connect(function(plr)
-	if (not Whitelist[plr.UserId]) then
-		plr:Kick("Unauthorized, Please purchase astral to execute this")
-		wait(2)
-		while true do
+    if (not Whitelist[plr.UserId]) then
+        plr:Kick("Unauthorized, Please purchase astral to execute this")
+        wait(0.5)
+        while true do
 
-		end
-	end
+        end
+    end
 end)
 
 return nil
-
-
